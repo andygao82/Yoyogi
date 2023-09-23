@@ -12,9 +12,24 @@
 <?php wp_body_open(); ?>
 <div id="wrapper" class="hfeed">
 <header id="header" role="banner">
-  <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
-    <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
-  </nav>
+  <div class="container">
+    <div class="wrapper">
+      <div class="main inner-wrapper">
+        <div class="info">
+          <span>269 Swanston St, Melbourne VIC 3000 | MON - SUN 9:00AM - 10:00PM</span>
+        </div>
+        <a href="#" class="link">Online Order</a>
+      </div>
+      <div class="side menu-icon">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="menu" role="navigation" itemscope itemtype="https://schema.org/SiteNavigationElement">
+        <?php wp_nav_menu( array( 'theme_location' => 'main-menu', 'link_before' => '<span itemprop="name">', 'link_after' => '</span>' ) ); ?>
+      </nav>
+    </div>
+  </div>
 </header>
 <div id="container">
 <main id="content" role="main">
