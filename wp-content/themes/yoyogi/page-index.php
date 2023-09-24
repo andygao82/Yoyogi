@@ -27,9 +27,27 @@
   <div class="container">
     <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
     <div class="inner-wrapper">
-      <div class="slider">
-
-      </div>
+      <section id="main-slider" class="splide">
+        <div class="splide__track">
+          <ul class="splide__list">
+            <?php for ($i = 1; $i <= 8; $i++): ?>
+              <?php if (get_field('about_us_gallery_image_' . $i)) : ?>
+                <li class="splide__slide">
+                  <img src="<?php echo get_field('about_us_gallery_image_' . $i) ?>" alt="<?= $post->post_title?>">
+                </li>
+              <?php endif; ?>
+            <?php endfor ?>
+          </ul>
+        </div>
+        <div class="splide__arrows">
+          <button class="splide__arrow splide__arrow--prev">
+            <img src="<?= get_template_directory_uri() . '/img/arrow-next.svg'?>" alt="Midcity Centre">
+          </button>
+          <button class="splide__arrow splide__arrow--next">
+            <img src="<?= get_template_directory_uri() . '/img/arrow-next.svg'?>" alt="Midcity Centre">
+          </button>
+        </div>
+      </section>
       <div class="main-content">
         <h2>About Us</h2>
         <div class="main-content-details">
@@ -42,28 +60,34 @@
 
 <div class="section food-section">
   <div class="container">
-    <div class="inner-wrapper top-food-section">
-      <div class="food-content">
-        <h2><?= get_field('joy_section_heading')?></h2>
-        <div class="about-us-content-details">
-          <?= get_field('joy_section_content')?>
+    <div class="inner-container">
+      <div class="wrapper">
+        <div class="inner-wrapper top-food-section">
+          <div class="food-content">
+            <h2><?= get_field('joy_section_heading')?></h2>
+            <div class="food-content-details">
+              <?= get_field('joy_section_content')?>
+            </div>
+            <a href="<?= get_field('conveyoy_belt_menu')?>" target="_blank" class="link arrow-link">View Menu</a>
+          </div>
+          <div class="section-image food-image">
+            <img src="<?= get_field('joy_section_image')?>" alt="<?= get_field('handroll_bar_heading')?>">
+          </div>
         </div>
-        <a href="<?= get_field('conveyoy_belt_menu')?>" target="_blank" class="link arrow-link">View Menu</a>
       </div>
-      <div class="section-image food-image">
-        <img src="<?= get_field('joy_section_image')?>" alt="<?= get_field('handroll_bar_heading')?>">
-      </div>
-    </div>
-    <div class="inner-wrapper bottom-food-section">
-      <div class="food-content">
-        <h2><?= get_field('handroll_bar_heading')?></h2>
-        <div class="about-us-content-details">
-          <?= get_field('handroll_bar_content')?>
+      <div class="wrapper">
+        <div class="inner-wrapper bottom-food-section">
+          <div class="food-content">
+            <h2><?= get_field('handroll_bar_heading')?></h2>
+            <div class="food-content-details">
+              <?= get_field('handroll_bar_content')?>
+            </div>
+            <a href="<?= get_field('handroll_bar_menu')?>" target="_blank" class="link arrow-link">View Menu</a>
+          </div>
+          <div class="section-image food-image">
+            <img src="<?= get_field('handroll_bar_image')?>" alt="<?= get_field('handroll_bar_heading')?>">
+          </div>
         </div>
-        <a href="<?= get_field('handroll_bar_menu')?>" target="_blank" class="link arrow-link">View Menu</a>
-      </div>
-      <div class="section-image food-image">
-        <img src="<?= get_field('handroll_bar_image')?>" alt="<?= get_field('handroll_bar_heading')?>">
       </div>
     </div>
     <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
@@ -79,11 +103,22 @@
       </div>
       <div class="beverage-content">
         <h2><?= get_field('beverage_heading')?></h2>
-        <div class="about-us-content-details">
+        <div class="beverage-content-details">
           <?= get_field('beverage_content')?>
         </div>
       </div>
     </div>
   </div>
 </div>
+<script>
+	document.addEventListener( 'DOMContentLoaded', function () {
+		var main = new Splide( '#main-slider', {
+      type: 'loop',
+      perPage: 4,
+      perMove: 1,
+      pagination: false,
+      gap: 45
+		}).mount();
+  });
+</script>
 <?php get_footer(); ?>
