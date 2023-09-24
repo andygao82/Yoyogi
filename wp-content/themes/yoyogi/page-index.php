@@ -12,7 +12,7 @@
         <div class="main-content-logo"><img src="<?= get_template_directory_uri() . '/images/logo-01.svg'?>" alt="Yoyogi Sushi"></div>
         <div class="main-content-content">
           <?= get_field('top_banner_content')?>
-          <a href="javascript:void(0)" onclick="" class="link arrow-link">About Us</a>
+          <a href="javascript:void(0)" class="link arrow-link" id="about-us-link">About Us</a>
         </div>
       </div>
       <div class="main-image">
@@ -23,7 +23,7 @@
   </div>
 </div>
 
-<div class="section about-us-section" id="about-us-section">
+<div class="section about-us-section" id="about-us">
   <div class="container">
     <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
     <div class="inner-wrapper">
@@ -62,7 +62,7 @@
   <div class="container">
     <div class="inner-container">
       <div class="wrapper">
-        <div class="inner-wrapper top-food-section">
+        <div class="inner-wrapper top-food-section" id="sushi-train">
           <div class="food-content">
             <h2><?= get_field('joy_section_heading')?></h2>
             <div class="food-content-details">
@@ -76,7 +76,7 @@
         </div>
       </div>
       <div class="wrapper">
-        <div class="inner-wrapper bottom-food-section">
+        <div class="inner-wrapper bottom-food-section" id="hand-roll">
           <div class="food-content">
             <h2><?= get_field('handroll_bar_heading')?></h2>
             <div class="food-content-details">
@@ -94,7 +94,7 @@
   </div>
 </div>
 
-<div class="section beverage-section">
+<div class="section beverage-section" id="beverage">
   <div class="container">
     <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
     <div class="inner-wrapper">
@@ -110,15 +110,5 @@
     </div>
   </div>
 </div>
-<script>
-	document.addEventListener( 'DOMContentLoaded', function () {
-		var main = new Splide( '#main-slider', {
-      type: 'loop',
-      perPage: 4,
-      perMove: 1,
-      pagination: false,
-      gap: 45
-		}).mount();
-  });
-</script>
+
 <?php get_footer(); ?>

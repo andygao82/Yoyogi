@@ -170,3 +170,8 @@ function add_theme_scripts() {
   wp_enqueue_style ( 'custom', get_template_directory_uri () . '/css/custom.css', array( 'style' ) );
 }
 add_action ( 'wp_enqueue_scripts', 'add_theme_scripts' );
+
+function custom_js_script() {
+  wp_enqueue_script('custom-script', get_template_directory_uri() . '/js/global.js');
+}
+add_action('wp_enqueue_scripts', 'custom_js_script');

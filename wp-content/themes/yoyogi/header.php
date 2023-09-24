@@ -10,7 +10,7 @@
 	<script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
   <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> id="body">
 <?php wp_body_open(); ?>
 <div id="wrapper" class="hfeed">
 <header id="header" role="banner">
@@ -22,7 +22,7 @@
         </div>
         <a href="#" class="link">Online Order</a>
       </div>
-      <div class="side menu-icon">
+      <div class="side menu-icon" id="menu-icon">
         <span></span>
         <span></span>
         <span></span>
