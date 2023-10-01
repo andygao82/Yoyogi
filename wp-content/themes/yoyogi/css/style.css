@@ -149,8 +149,31 @@ nav {
   align-items: center;
   gap: var(--gap);
 }
+.arrow-link span {
+  position: relative;
+  display: inline-block;
+}
+.arrow-link span:after {
+  content: "";
+  display: block;
+  bottom: 0;
+  width: 0;
+  height: 1px;
+  background-color: #fff;
+  transition: all .5s ease-in-out;
+}
 .arrow-link img {
   width: 28px;
+}
+.arrow-link:hover, .arrow-link:active {
+  & span:after {
+    width: 100%;
+  }
+  & img {
+    -webkit-animation: bounce 1.5s infinite;
+	  -moz-animation: bounce 1.5s infinite;
+	  -o-animation: bounce 1.5s infinite;
+  }
 }
 .side {
   width: 100%;
@@ -411,5 +434,103 @@ nav {
       }
     }
   }
+}
 
+@media screen and (max-width: 1750px) {
+  html {
+    font-size: 9px;
+  }
+  .banner-section {
+    .main-image {
+      width: 100%;
+      max-width: 750px;
+    }
+    .inner-wrapper {
+      .main-content {
+        max-width: 750px;
+      }
+    }
+    .link {
+      margin-top: 63px;
+    }
+  }
+  .about-us-section {
+    .main-content {
+      max-width: 1440px;
+    }
+  }
+  .food-section {
+    .inner-wrapper {
+      max-width: 1440px;
+    }
+  }
+  .top-food-section {
+    .food-text-image {
+      max-width: 550px;
+    }
+  }
+  .bottom-food-section {
+    .food-text-image {
+      max-width: 750px;
+    }
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  html {
+    font-size: 8px;
+  }
+}
+
+@-webkit-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateX(0);}	
+	40% {-webkit-transform: translateX(5px);}
+	60% {-webkit-transform: translateX(15px);}
+}
+ 
+@-moz-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-moz-transform: translateX(0);}
+	40% {-moz-transform: translateX(5px);}
+	60% {-moz-transform: translateX(15px);}
+}
+ 
+@-o-keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {-o-transform: translateX(0);}
+	40% {-o-transform: translateX(5px);}
+	60% {-o-transform: translateX(15px);}
+}
+@keyframes bounce {
+	0%, 20%, 50%, 80%, 100% {transform: translateX(0);}
+	40% {transform: translateX(5px);}
+	60% {transform: translateX(15px);}
 }
