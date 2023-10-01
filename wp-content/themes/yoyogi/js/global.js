@@ -38,6 +38,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
   scrollToElement(beverageLink, 'beverage');
   scrollToElement(contactLink, 'footer');
 
+  var viewMapLink = document.getElementById('view-map');
+  var map = document.getElementById('map');
+  viewMapLink.addEventListener('click', function (e) {
+    e.preventDefault();
+    map.classList.toggle('active');
+  });
 });
 
 
