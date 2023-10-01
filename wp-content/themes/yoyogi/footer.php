@@ -3,11 +3,14 @@
 <footer id="footer" role="contentinfo">
   <div class="container">
     <div class="footer-logo">
-      <img src="<?= get_template_directory_uri() . '/images/logo.svg'?>" alt="Yoyogi Sushi">
+      <img src="<?= get_template_directory_uri() . '/images/footer-logo.svg'?>" alt="Yoyogi Sushi">
     </div>
     <div class="footer-address">
       <span>269 Swanston St, Melbourne VIC 3000</span>
-      <a href="javascript:;" class="link arrow-link" id="view-map">View Map</a>
+      <a href="javascript:;" class="link arrow-link" id="view-map">
+        <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
+        <span>View Map</span> 
+      </a>  
     </div>
     <div class="contact">
       <span>MON - SUN 9:00AM - 10:00PM</span>

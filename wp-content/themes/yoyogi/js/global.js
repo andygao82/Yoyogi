@@ -21,6 +21,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
     perPage: 4,
     perMove: 1,
     pagination: false,
+    fixedWidth : '315px',
     gap: 45
   }).mount();
 

@@ -18,7 +18,7 @@
     <div class="wrapper">
       <div class="main inner-wrapper">
         <div class="info">
-          <span>269 Swanston St, Melbourne VIC 3000 | MON - SUN 9:00AM - 10:00PM</span>
+          <span>269 Swanston St, Melbourne VIC 3000</span> | <span>MON - SUN 9:00AM - 10:00PM</span>
         </div>
         <a href="#" class="link">Online Order</a>
       </div>

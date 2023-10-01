@@ -12,7 +12,10 @@
         <div class="main-content-logo"><img src="<?= get_template_directory_uri() . '/images/logo-01.svg'?>" alt="Yoyogi Sushi"></div>
         <div class="main-content-content">
           <?= get_field('top_banner_content')?>
-          <a href="javascript:void(0)" class="link arrow-link" id="about-us-link">About Us</a>
+          <a href="javascript:void(0)" class="link arrow-link" id="about-us-link">
+            <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
+            <span>About Us</span>
+          </a>
         </div>
       </div>
       <div class="main-image">
@@ -41,10 +44,10 @@
         </div>
         <div class="splide__arrows">
           <button class="splide__arrow splide__arrow--prev">
-            <img src="<?= get_template_directory_uri() . '/img/arrow-next.svg'?>" alt="Midcity Centre">
+            <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
           </button>
           <button class="splide__arrow splide__arrow--next">
-            <img src="<?= get_template_directory_uri() . '/img/arrow-next.svg'?>" alt="Midcity Centre">
+            <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
           </button>
         </div>
       </section>
@@ -52,12 +55,15 @@
         <h2>About Us</h2>
         <div class="main-content-details">
           <?= get_field('about_us_content')?>
+          <a href="<?= get_field('conveyoy_belt_menu')?>" target="_blank" class="link arrow-link">
+            <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
+            <span>View Menu</span>
+          </a>
         </div>
       </div>
     </div>
   </div>
 </div>
-
 <div class="section food-section">
   <div class="container">
     <div class="inner-container">
@@ -68,10 +74,16 @@
             <div class="food-content-details">
               <?= get_field('joy_section_content')?>
             </div>
-            <a href="<?= get_field('conveyoy_belt_menu')?>" target="_blank" class="link arrow-link">View Menu</a>
+            <a href="<?= get_field('conveyoy_belt_menu')?>" target="_blank" class="link arrow-link">
+              <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
+              <span>View Menu</span>
+            </a>
           </div>
           <div class="section-image food-image">
-            <img src="<?= get_field('joy_section_image')?>" alt="<?= get_field('handroll_bar_heading')?>">
+            <img src="<?= get_field('joy_section_image')?>" alt="<?= get_field('joy_section_heading')?>">
+            <div class="food-text-image">
+              <img src="<?= get_template_directory_uri() . '/images/huizhuan.svg'?>" alt="arrow">
+            </div>
           </div>
         </div>
       </div>
@@ -82,10 +94,16 @@
             <div class="food-content-details">
               <?= get_field('handroll_bar_content')?>
             </div>
-            <a href="<?= get_field('handroll_bar_menu')?>" target="_blank" class="link arrow-link">View Menu</a>
+            <a href="<?= get_field('handroll_bar_menu')?>" target="_blank" class="link arrow-link">
+              <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
+              <span>View Menu</span>
+            </a>
           </div>
           <div class="section-image food-image">
             <img src="<?= get_field('handroll_bar_image')?>" alt="<?= get_field('handroll_bar_heading')?>">
+            <div class="food-text-image">
+              <img src="<?= get_template_directory_uri() . '/images/shoujuan.svg'?>" alt="arrow">
+            </div>
           </div>
         </div>
       </div>
@@ -93,7 +111,6 @@
     <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
   </div>
 </div>
-
 <div class="section beverage-section" id="beverage">
   <div class="container">
     <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
@@ -107,8 +124,10 @@
           <?= get_field('beverage_content')?>
         </div>
       </div>
+      <div class="beverage-text-image">
+        <img src="<?= get_template_directory_uri() . '/images/circle.svg'?>" alt="arrow">
+      </div>
     </div>
   </div>
 </div>
-
 <?php get_footer(); ?>
