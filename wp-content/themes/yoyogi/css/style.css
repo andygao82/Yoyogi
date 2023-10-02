@@ -815,7 +815,16 @@ nav {
     }
   }
 }
-
+nav {
+  .menu {
+    .menu-item {
+      & a {
+        font-size: 3rem;
+        padding: 30px;
+      }
+    }
+  }
+}
 .fadeUp {
   transition: 2s all ease-in-out;
   opacity: 0;
