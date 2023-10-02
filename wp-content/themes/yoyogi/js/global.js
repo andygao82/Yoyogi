@@ -22,7 +22,12 @@ document.addEventListener( 'DOMContentLoaded', function () {
     perMove: 1,
     pagination: false,
     fixedWidth : '315px',
-    gap: 45
+    gap: 45,
+    breakpoints: {
+      1600: {
+        fixedWidth: '275px',
+      }
+    }
   }).mount();
 
   var aboutUsLink = document.getElementById('menu-item-53');
@@ -44,6 +49,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
   viewMapLink.addEventListener('click', function (e) {
     e.preventDefault();
     map.classList.toggle('active');
+  });
+
+  inView('.fadeUp').on('enter', function (element) {
+    element.classList.add('fadeUp--anime');
+  });
+
+  inView('.fadeUp-10').on('enter', function (element) {
+    element.classList.add('fadeUp--anime');
   });
 });
 

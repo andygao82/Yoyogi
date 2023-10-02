@@ -212,7 +212,7 @@ nav {
 .side-content {
   width: 100%;
   white-space: nowrap;
-  max-width: 100px;
+  min-width: 100px;
   writing-mode: vertical-rl;
   display: flex;
   align-items: center;
@@ -239,6 +239,7 @@ nav {
       position: absolute;
       width: 100%;
       max-width: 908px;
+      z-index: 1;
     }
   }
   .main-content-logo {
@@ -383,6 +384,7 @@ nav {
   overflow: hidden;
   > .container {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     padding: 80px 100px;
   }
@@ -446,6 +448,7 @@ nav {
       max-width: 750px;
     }
     .inner-wrapper {
+      padding: 90px;
       .main-content {
         max-width: 750px;
       }
@@ -476,10 +479,46 @@ nav {
   }
 }
 
-@media screen and (max-width: 1400px) {
-  html {
-    font-size: 8px;
+@media screen and (max-width: 1600px) {
+  .banner-section {
+    .main-image {
+      max-width: 700px;
+    }
+    .inner-wrapper {
+      padding: 70px;
+      .main-content {
+        max-width: 700px;
+      }
+    }
   }
+  .side-content {
+    min-width: 80px;
+  }
+  #main-slider {
+    max-width: 1280px;
+    margin: 70px 70px 0;
+  }
+  .about-us-section {
+    .main-content {
+      max-width: 1280px;
+    }
+  }
+  .food-section {
+    .inner-wrapper {
+      max-width: 1280px;
+    }
+  }
+  .beverage-section {
+    .inner-wrapper {
+      margin: 70px;
+    }
+  }
+  #footer {
+    .footer-logo {
+      max-width: 350px;
+    }
+  }
+
 }
 
 @media screen and (max-width: 1200px) {
@@ -512,6 +551,20 @@ nav {
   }
 }
 
+.fadeUp {
+  transition: 2s all ease-in-out;
+  opacity: 0;
+  transform: translate(0, 50px);
+}
+.fadeUp-10 {
+  transition: 3s all ease-in-out;
+  opacity: 0;
+  transform: translate(0, 50px);
+}
+.fadeUp--anime {
+  opacity: 1;
+  transform: translate(0, 0);
+}
 @-webkit-keyframes bounce {
 	0%, 20%, 50%, 80%, 100% {-webkit-transform: translateX(0);}	
 	40% {-webkit-transform: translateX(5px);}
