@@ -82,7 +82,7 @@
           <div class="section-image food-image">
             <img src="<?= get_field('joy_section_image')?>" alt="<?= get_field('joy_section_heading')?>">
             <div class="food-text-image fadeUp-10">
-              <img src="<?= get_template_directory_uri() . '/images/huizhuan.svg'?>" alt="arrow">
+              <img src="<?= get_template_directory_uri() . '/images/huizhuan1.svg'?>" alt="arrow">
             </div>
           </div>
         </div>
@@ -102,7 +102,7 @@
           <div class="section-image food-image fadeUp-10">
             <img src="<?= get_field('handroll_bar_image')?>" alt="<?= get_field('handroll_bar_heading')?>">
             <div class="food-text-image">
-              <img src="<?= get_template_directory_uri() . '/images/shoujuan.svg'?>" alt="arrow">
+              <img src="<?= get_template_directory_uri() . '/images/shoujuan1.svg'?>" alt="arrow">
             </div>
           </div>
         </div>

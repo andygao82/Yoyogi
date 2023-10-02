@@ -26,6 +26,14 @@ document.addEventListener( 'DOMContentLoaded', function () {
     breakpoints: {
       1600: {
         fixedWidth: '275px',
+      },
+      1400: {
+        fixedWidth: '225px',
+      },
+      1199: {
+        fixedWidth: 'unset',
+        perPage: 3,
+        gap: 30
       }
     }
   }).mount();

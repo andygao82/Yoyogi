@@ -105,37 +105,48 @@ nav {
   .menu {
     height: 100%;
     .menu-item {
-      height: calc(100% / 6);
+      height: calc(100% / 7);
       display: flex;
       align-items: center;
       justify-content: flex-end;
+      border-bottom: 1px solid #231E5C;
       & a {
         width: 100%;
         color: #231E5C;
         font-size: 4.8rem;
         letter-spacing: .96px;
         font-weight: 800;
-        padding: 30px 80px;
+        padding: 0 80px;
         display: block;
         transition: all .25s ease-in-out;
         cursor: pointer;
-        border-bottom: 1px solid #231E5C;
         text-align: right;
       }
-      & a:hover {
-        color: var(--secondary);
-        border-bottom: 1px solid var(--secondary);
-      }
+      
+    }
+  }
+}
+.menu {
+  .menu-item:hover {
+    border-bottom: 1px solid var(--secondary);
+    & a {
+      color: var(--secondary);
     }
   }
 }
 .info {
   display: flex;
   gap: 16px;
-}
-.info span {
-  font-weight: 800;
-  font-size: 2rem;
+  & span {
+    font-weight: 800;
+    font-size: 2rem;
+    & br {
+      display: none;
+    }
+  }
+  .divider {
+    font-weight: normal;
+  }
 }
 .link {
   text-transform: uppercase;
@@ -254,6 +265,7 @@ nav {
     margin-top: 70px;
   }
   .main-image {
+    line-height: 0;
     margin-left: auto;
   }
 }
@@ -518,36 +530,280 @@ nav {
       max-width: 350px;
     }
   }
-
 }
-
-@media screen and (max-width: 1200px) {
-  html {
-    font-size: 8px;
+@media screen and (max-width: 1400px) {
+  .main {
+    padding: 25px 60px;
+  }
+  .side {
+    max-width: 80px;
+  }
+  nav {
+    right: 80px;
+    width: calc(100% - 80px);
+    height: calc(100dvh - 80px);
+  }
+  .banner-section {
+    .main-image {
+      max-width: 600px;
+    }
+    .inner-wrapper {
+      padding: 60px;
+      .main-content {
+        max-width: 650px;
+      }
+    }
+  }
+  #main-slider {
+    max-width: 1080px;
+    margin: 60px 60px 0;
+  }
+  .about-us-section {
+    .main-content {
+      max-width: 1080px;
+    }
+  }
+  .food-section {
+    .inner-wrapper {
+      max-width: 1140px;
+    }
+  }
+  .top-food-section {
+    .food-text-image {
+      max-width: 350px;
+    }
+  }
+  .bottom-food-section {
+    .food-text-image {
+      max-width: 450px;
+    }
+  }
+  .beverage-section {
+    .inner-wrapper {
+      margin: 60px;
+    }
   }
 }
-
+@media screen and (max-width: 1199px) {
+  .menu-icon {
+    gap: 12px;
+    & span {
+      max-width: 40px;
+    }
+  }
+  .main {
+    padding: 0 30px;
+  }
+ 
+  .link {
+    font-size: 2rem;
+  }
+  header {
+    .inner-wrapper {
+      width: calc(100% - 60px);
+    }
+  }
+  .menu-icon {
+    width: 60px;
+    height: 60px;
+  }
+  nav {
+    right: 60px;
+    width: calc(100% - 60px);
+    height: calc(100dvh - 60px);
+    .menu {
+      .menu-item {
+        display: flex;
+        align-items: center;
+        & a {
+          font-size: 4rem;
+          padding: 30px;
+        }
+      }
+    }
+  }
+  .side {
+    width: 60px;
+    font-size: 2rem;
+  }
+  .side-content {
+    min-width: unset;
+    max-width: unset;
+  }
+  .banner-section {
+    .main-image {
+      position: relative;
+      max-width: 600px;
+      &:after {
+        position: absolute;
+        content: '';
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, .2);
+        z-index: 1;
+        top: 0;
+        left: 0;
+      }
+    }
+    .inner-wrapper {
+      width: calc(100% - 60px);
+      padding: 40px;
+      .main-content {
+        max-width: 650px;
+      }
+    }
+  }
+  #main-slider {
+    width: 100%;
+    margin: 0;
+    .splide__arrow {
+      display: none;
+    }
+  }
+  .about-us-section {
+    .inner-wrapper {
+      width: calc(100% - 60px);
+      padding: 40px;
+    }
+    .main-content {
+      flex-direction: column;
+      gap: 0;
+      margin: 0;
+      padding: 40px 0;
+      & h2 {
+        margin-bottom: 1em;
+      }
+      .arrow-link {
+        margin-top: 45px;
+      }
+    }
+  }
+  .food-section {
+    .food-content {
+      max-width: unset;
+    }
+    .inner-wrapper {
+      margin: 0;
+      padding: 40px;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .inner-container {
+      width: calc(100% - 60px);
+    }
+    .food-image {
+      max-width: calc(100% - 80px);
+      margin-left: auto;
+      margin-bottom: 40px;
+    }
+  }
+  .beverage-section {
+    .inner-wrapper {
+      margin: 0;
+      padding: 40px;
+      max-width: calc(100% - 60px);
+      flex-direction: column-reverse;
+      gap: 40px;
+    }
+    .beverage-content {
+      margin-top: 0;
+    }
+  }
+  .beverage-text-image {
+    position: absolute;
+    width: 320px;
+    bottom: -35px;
+    right: 20px;
+  }
+  #footer {
+    #view-map {
+      justify-content: center;
+    }
+    .contact {
+      align-items: center;
+    }
+    .footer-address {
+      margin-bottom: 0;
+    }
+    > .container {
+      padding: 60px 40px;
+      flex-direction: column;
+      gap: 40px;
+    }
+    .footer-logo {
+      max-width: 250px;
+    }
+    #copyright {
+      .container {
+        padding: 40px;
+      }
+    }
+  }
+}
 @media screen and (max-width: 991px) {
-  html {
-    font-size: 8px;
+  .info {
+    gap: 30px;
+    .divider {
+      display: none;
+    }
+    & span {
+      font-size: 1.8rem;
+    }
   }
-}
-
-@media screen and (max-width: 768px) {
-  html {
-    font-size: 8px;
+  .info {
+    width: 100%;
+    justify-content: space-between;
   }
+  header {
+    .link {
+      display: none;
+    }
+  } 
 }
-
-@media screen and (max-width: 640px) {
-  html {
-    font-size: 8px;
+@media screen and (max-width: 767px) {
+  .info span {
+    & br {
+      display: block;
+    }
+  }
+  .banner-section {
+    .inner-wrapper {
+      align-items: center;
+      justify-items: center;
+      padding: 0;
+      .main-content {
+        max-width: calc(100% - 60px);
+        left: 0;
+        right: 0;
+        margin: auto;
+      }
+      .main-image {
+        width: 100%;
+        height: 100%;
+        & img {
+          height: 100%;
+        }
+      }
+    }
+  }
+  h2 {
+    font-size: 4rem;
+  }
+  .food-section
+  .food-image {
+      max-width: calc(100% - 40px);
+      margin-left: auto;
+      margin-bottom: 40px;
   }
 }
 
 @media screen and (max-width: 480px) {
-  html {
-    font-size: 8px;
+  .info {
+    gap: 30px;
+    & span {
+      font-size: 1.3rem;
+    }
   }
 }
 
