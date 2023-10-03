@@ -26,7 +26,7 @@
   <div id="copyright">
     <div class="container">
       <span>COPYRIGHT &copy; <?= date('Y');?> YOYOGI SUSHI TRAIN. ALL RIGHTS RESERVED</span>
-      <span>DEDSIGNED BY D&D CREATIVE</span>
+      <span>DESIGNED BY D&D CREATIVE</span>
     </div>
   </div>
 </footer>

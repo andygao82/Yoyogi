@@ -22,13 +22,13 @@
         <img src="<?= get_field('top_banner_image')?>">
       </div>
     </div>
-    <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
+    <div class="side side-content type-1" id="type-1"></div>
   </div>
 </div>
 
 <div class="section about-us-section" id="about-us">
   <div class="container">
-    <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
+    <div class="side side-content type-2" id="type-2"></div>
     <div class="inner-wrapper">
       <section id="main-slider" class="splide">
         <div class="splide__track">
@@ -47,7 +47,13 @@
             <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
           </button>
           <button class="splide__arrow splide__arrow--next">
-            <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
+            <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                viewBox="0 0 27.9 32.3" style="enable-background:new 0 0 27.9 32.3;" xml:space="preserve">
+              <g id="Polygon_4" transform="translate(27.927) rotate(90)">
+                <path class="st3" d="M16.2,0l16.2,27.9H0L16.2,0z"/>
+                <path class="st0" d="M16.2,2L1.7,26.9h28.9L16.2,2 M16.2,0l16.2,27.9H0L16.2,0z"/>
+              </g>
+            </svg>
           </button>
         </div>
       </section>
@@ -80,7 +86,19 @@
             </a>
           </div>
           <div class="section-image food-image">
-            <img src="<?= get_field('joy_section_image')?>" alt="<?= get_field('joy_section_heading')?>">
+            <section id="food-top-slider" class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <?php for ($i = 1; $i <= 6; $i++): ?>
+                    <?php if (get_field('joy_section_image_' . $i)) : ?>
+                      <li class="splide__slide">
+                        <img src="<?php echo get_field('joy_section_image_' . $i) ?>">
+                      </li>
+                    <?php endif; ?>
+                  <?php endfor ?>
+                </ul>
+              </div>
+            </section>
             <div class="food-text-image fadeUp-10">
               <img src="<?= get_template_directory_uri() . '/images/huizhuan1.svg'?>" alt="arrow">
             </div>
@@ -99,8 +117,20 @@
               <span>View Menu</span>
             </a>
           </div>
-          <div class="section-image food-image fadeUp-10">
-            <img src="<?= get_field('handroll_bar_image')?>" alt="<?= get_field('handroll_bar_heading')?>">
+          <div class="section-image food-image">
+            <section id="food-bottom-slider" class="splide">
+              <div class="splide__track">
+                <ul class="splide__list">
+                  <?php for ($i = 1; $i <= 6; $i++): ?>
+                    <?php if (get_field('handroll_bar_image_' . $i)) : ?>
+                      <li class="splide__slide">
+                        <img src="<?php echo get_field('handroll_bar_image_' . $i) ?>">
+                      </li>
+                    <?php endif; ?>
+                  <?php endfor ?>
+                </ul>
+              </div>
+            </section>
             <div class="food-text-image">
               <img src="<?= get_template_directory_uri() . '/images/shoujuan1.svg'?>" alt="arrow">
             </div>
@@ -108,12 +138,12 @@
         </div>
       </div>
     </div>
-    <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
+    <div class="side side-content type-3" id="type-3"></div>
   </div>
 </div>
 <div class="section beverage-section" id="beverage">
   <div class="container">
-    <div class="side side-content">SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE</div>
+    <div class="side side-content type-4" id="type-4"></div>
     <div class="inner-wrapper">
       <div class="section-image beverage-image fadeUp-10">
         <img src="<?= get_field('beverage_image')?>" alt="<?= get_field('beverage_heading')?>">
