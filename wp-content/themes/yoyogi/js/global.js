@@ -41,7 +41,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
     type: 'fade',
     perPage: 1,
     rewind: true,
-    pagination: false,
     arrows: false,
     autoplay: true
   }).mount();
@@ -49,7 +48,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
     type: 'fade',
     perPage: 1,
     rewind: true,
-    pagination: false,
     arrows: false,
     autoplay: true
   }).mount();
