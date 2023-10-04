@@ -82,19 +82,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
     element.classList.add('fadeUp--anime');
   });
 
-  inView('.type-1').on('enter', function (element) {
-    typeWriter1()
-  });
-  inView('.type-2').on('enter', function (element) {
-    typeWriter2()
-  });
-  inView('.type-3').on('enter', function (element) {
-    typeWriter3()
-  });
-  inView('.type-4').on('enter', function (element) {
-    typeWriter4()
-  });
-
   document.addEventListener('mousemove', parallax);
   var elem = document.getElementById("wrapper");
   function parallax(e) {
@@ -109,47 +96,33 @@ document.addEventListener( 'DOMContentLoaded', function () {
     elem.style.backgroundPosition = x;
   }
 
-  var i = 0;
-  var j = 0;
-  var k = 0;
-  var l = 0;
-  var txt1 = 'SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE'; /* The text */
-  var txt2 = 'SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE'; /* The text */
-  var txt3 = 'SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE'; /* The text */
-  var txt4 = 'SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE'; /* The text */
-  var speed = 200; /* The speed/duration of the effect in milliseconds */
+  inView('.type-1').once('enter', function (element) {
+    typeWriter(element)
+  });
+  inView('.type-2').once('enter', function (element) {
+    typeWriter(element)
+  });
+  inView('.type-3').once('enter', function (element) {
+    typeWriter(element)
+  });
+  inView('.type-4').once('enter', function (element) {
+    typeWriter(element)
+  });
 
-  function typeWriter1() {
-    var d = document.getElementById("type-1")
-    if (i < txt1.length) {
-      d.innerHTML += txt1.charAt(i);
-      i++;
-      setTimeout(typeWriter1, speed);
+  var txt = 'SUSHI TRAIN · HAND-ROLL SUSHI BAR · OMAKASE'; 
+  var speed = 200; 
+
+  function typeWriter (element) {
+    var index = 0;
+    var d = document.getElementById(element.id);
+    function type () { 
+      if (index < txt.length) {
+        d.innerHTML += txt.charAt(index);
+        index++;
+        setTimeout(type, speed);
+      }
     }
-  }
-  function typeWriter2() {
-    var d = document.getElementById("type-2")
-    if (j < txt2.length) {
-      d.innerHTML += txt2.charAt(j);
-      j++;
-      setTimeout(typeWriter2, speed);
-    }
-  }
-  function typeWriter3() {
-    var d = document.getElementById("type-3")
-    if (k < txt3.length) {
-      d.innerHTML += txt3.charAt(k);
-      k++;
-      setTimeout(typeWriter3, speed);
-    }
-  }
-  function typeWriter4() {
-    var d = document.getElementById("type-4")
-    if (l < txt4.length) {
-      d.innerHTML += txt4.charAt(l);
-      l++;
-      setTimeout(typeWriter4, speed);
-    }
+    type ()
   }
 });
 

@@ -23,6 +23,7 @@ body {
   }
 }
 #wrapper {
+  overflow-x: hidden;
   background-image: url(../images/bg.svg);
   background-position: 50% 50%;
   background-repeat: no-repeat;
