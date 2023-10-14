@@ -18,8 +18,20 @@
           </a>
         </div>
       </div>
-      <div class="main-image fadeUp-10">
-        <img src="<?= get_field('top_banner_image')?>">
+      <div class="main-image">
+        <div class="splide banner-slider" id="banner-slider">
+          <div class="splide__track">
+            <ul class="splide__list">
+              <?php for ($i = 1; $i <= 4; $i++): ?>
+                <?php if (get_field('top_banner_image_' . $i)) : ?>
+                  <li class="splide__slide">
+                    <img src="<?php echo get_field('top_banner_image_' . $i) ?>" alt="Yoyogi Sushi">
+                  </li>
+                <?php endif; ?>
+              <?php endfor ?>
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
     <div class="side side-content type-1" id="type-1"></div>

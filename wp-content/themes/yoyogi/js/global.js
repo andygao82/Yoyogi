@@ -16,6 +16,13 @@ document.addEventListener( 'DOMContentLoaded', function () {
       body.classList.remove('active');
     });
   }
+  new Splide( '#banner-slider', {
+    type: 'fade',
+    perPage: 1,
+    rewind: true,
+    arrows: false,
+    autoplay: true
+  }).mount();
   new Splide( '#main-slider', {
     type: 'loop',
     perPage: 4,

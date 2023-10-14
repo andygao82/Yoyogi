@@ -23,7 +23,15 @@
           <span class="divider">|</span>
           <span>MON - SUN<br> 9:00AM - 10:00PM</span>
         </div>
-        <a href="#" class="link">Online Order</a>
+        <div class="links">
+          <a class="social-media-link" href="#" target="_blank">
+            <img src="<?= get_template_directory_uri() . '/images/instagram.svg'?>" alt="Yoyogi Sushi"> 
+          </a>
+          <a class="social-media-link" href="#" target="_blank">
+            <img src="<?= get_template_directory_uri() . '/images/facebook.svg'?>" alt="Yoyogi Sushi"> 
+          </a>
+          <a href="#" class="link">Online Order</a>
+        </div>
       </div>
       <div class="side menu-icon" id="menu-icon">
         <span></span>
