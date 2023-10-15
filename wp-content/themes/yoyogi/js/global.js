@@ -72,13 +72,6 @@ document.addEventListener( 'DOMContentLoaded', function () {
   scrollToElement(beverageLink, 'beverage');
   scrollToElement(contactLink, 'footer');
 
-  var viewMapLink = document.getElementById('view-map');
-  var map = document.getElementById('map');
-  viewMapLink.addEventListener('click', function (e) {
-    e.preventDefault();
-    map.classList.toggle('active');
-  });
-
   inView('.fadeUp').on('enter', function (element) {
     element.classList.add('fadeUp--anime');
   });
@@ -87,19 +80,17 @@ document.addEventListener( 'DOMContentLoaded', function () {
     element.classList.add('fadeUp--anime');
   });
 
-  document.addEventListener('mousemove', parallax);
-  var elem = document.getElementById("wrapper");
-  function parallax(e) {
-    var _w = window.innerWidth/2;
-    var _h = window.innerHeight/2;
-    var _mouseX = e.clientX;
-    var _mouseY = e.clientY;
-    var _depth1 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
-    var _depth2 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
-    var _depth3 = `${50 - (_mouseX - _w) * 0.06}% ${50 - (_mouseY - _h) * 0.06}%`;
-    var x = `${_depth3}, ${_depth2}, ${_depth1}`;
-    elem.style.backgroundPosition = x;
-  }
+  document.addEventListener('mousemove', function(event) {
+    var windowWidth = window.innerWidth;
+    var windowHeight = window.innerHeight;
+    
+    var mouseXpercentage = Math.round(event.clientX / windowWidth * 100);
+    var mouseYpercentage = Math.round(event.clientY / windowHeight * 100);
+    
+    var radialGradientValue = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '% , #ED3E8E, #231E5C), radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #ED3E8E, #231E5C)';
+    document.getElementById('wrapper').style.background = radialGradientValue;
+  });
+  
 
   inView('.type-1').once('enter', function (element) {
     typeWriter(element)

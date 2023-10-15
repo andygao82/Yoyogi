@@ -13,7 +13,7 @@
 </head>
 <body <?php body_class(); ?> id="body">
 <?php wp_body_open(); ?>
-<div id="wrapper" class="hfeed">
+<div id="wrapper" class="hfeed radial-gradient">
 <header id="header" role="banner">
   <div class="container">
     <div class="wrapper">

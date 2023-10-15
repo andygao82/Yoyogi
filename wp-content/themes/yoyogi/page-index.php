@@ -73,10 +73,6 @@
         <h2 class="fadeUp">About Us</h2>
         <div class="main-content-details fadeUp">
           <?= get_field('about_us_content')?>
-          <a href="<?= get_field('conveyoy_belt_menu')?>" target="_blank" class="link arrow-link fadeUp-10">
-            <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
-            <span>View Menu</span>
-          </a>
         </div>
       </div>
     </div>
