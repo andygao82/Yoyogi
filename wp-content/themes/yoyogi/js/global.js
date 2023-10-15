@@ -87,11 +87,10 @@ document.addEventListener( 'DOMContentLoaded', function () {
     var mouseXpercentage = Math.round(event.clientX / windowWidth * 100);
     var mouseYpercentage = Math.round(event.clientY / windowHeight * 100);
     
-    var radialGradientValue = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '% , #ED3E8E, #231E5C), radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #ED3E8E, #231E5C)';
+    var radialGradientValue = 'radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '% , #ED3E8E, #231E5C), radial-gradient(at ' + mouseXpercentage + '% ' + mouseYpercentage + '%, #231E5C, #ED3E8E)';
     document.getElementById('wrapper').style.background = radialGradientValue;
   });
   
-
   inView('.type-1').once('enter', function (element) {
     typeWriter(element)
   });

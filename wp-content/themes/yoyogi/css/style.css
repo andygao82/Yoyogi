@@ -71,6 +71,9 @@ img {
 }
 header {
   position: relative;
+  .container {
+    overflow: unset;
+  }
   .inner-wrapper {
     display: flex;
     align-items: center;
@@ -90,7 +93,7 @@ header {
       line-height: 0;
     }
     & img {
-      height: 25px;
+      height: 26px;
     }
   }
   .link {
@@ -590,12 +593,7 @@ nav {
     font-size: 9px;
   }
   .banner-section {
-    .main-image {
-      width: 100%;
-      max-width: 750px;
-    }
     .inner-wrapper {
-      padding: 90px;
       .main-content {
         max-width: 750px;
       }
@@ -628,11 +626,7 @@ nav {
 
 @media screen and (max-width: 1600px) {
   .banner-section {
-    .main-image {
-      max-width: 700px;
-    }
     .inner-wrapper {
-      padding: 70px;
       .main-content {
         max-width: 700px;
       }
@@ -660,13 +654,22 @@ nav {
       margin: 70px;
     }
   }
-  #footer {
-    .footer-logo {
-      max-width: 350px;
-    }
-  }
 }
 @media screen and (max-width: 1400px) {
+  .banner-section {
+    .main-image {
+      max-height: 100%;
+    }
+    .banner-slider {
+      height: 100%;
+      .splide__track {
+        height: 100%;
+        .splide__slide img {
+          height: 100%;
+        }
+      }
+    }
+  }
   .main {
     padding: 25px 60px;
   }
@@ -679,11 +682,7 @@ nav {
     height: calc(100dvh - 80px);
   }
   .banner-section {
-    .main-image {
-      max-width: 600px;
-    }
     .inner-wrapper {
-      padding: 60px;
       .main-content {
         max-width: 650px;
       }
@@ -737,6 +736,14 @@ nav {
     .inner-wrapper {
       width: calc(100% - 60px);
     }
+    .links {
+      .social-media-link:first-child {
+        width: 30px;
+      }
+      .link {
+        display: none;
+      }
+    }
   }
   .menu-icon {
     width: 60px;
@@ -756,6 +763,7 @@ nav {
         }
       }
     }
+  
   }
   .side {
     width: 60px;
@@ -766,27 +774,14 @@ nav {
     max-width: unset;
   }
   .banner-section {
-    .main-image {
-      position: relative;
-      max-width: 600px;
-      &:after {
-        position: absolute;
-        content: '';
-        display: block;
-        width: 100%;
-        height: 100%;
-        background-color: rgba(0, 0, 0, .2);
-        z-index: 1;
-        top: 0;
-        left: 0;
-      }
-    }
     .inner-wrapper {
       width: calc(100% - 60px);
-      padding: 40px;
       .main-content {
         max-width: 650px;
       }
+    }
+    .splide__pagination {
+      display: none;
     }
   }
   #main-slider {
@@ -862,12 +857,8 @@ nav {
       margin-bottom: 0;
     }
     > .container {
-      padding: 60px 40px;
       flex-direction: column;
       gap: 40px;
-    }
-    .footer-logo {
-      max-width: 250px;
     }
     #copyright {
       .container {
@@ -877,6 +868,22 @@ nav {
   }
 }
 @media screen and (max-width: 991px) {
+  .banner-section {
+    .main-content-logo {
+      margin-bottom: 30px;
+    }
+    .inner-wrapper {
+      .main-image {
+        height: calc(100dvh - 60px);
+        .splide__slide {
+          max-height: 100%;
+          img {
+            height: 100%;
+          }
+        }
+      }
+    }
+  }
   .info {
     gap: 30px;
     .divider {
@@ -891,7 +898,7 @@ nav {
     justify-content: space-between;
   }
   header {
-    .link {
+    .links {
       display: none;
     }
   } 
@@ -914,13 +921,6 @@ nav {
         right: 0;
         margin: auto;
       }
-      .main-image {
-        width: 100%;
-        height: 100%;
-        & img {
-          height: 100%;
-        }
-      }
     }
   }
   h2 {
@@ -934,11 +934,31 @@ nav {
   .beverage-text-image {
     display: none;
   }
-  #footer #copyright .container {
-    flex-direction: column;
-    text-align: center;
-    justify-content: center;
-    gap: 15px
+  #footer {
+    .footer-logo {
+      padding: 0;
+      border-bottom: 0;
+    }
+    .arrow-link {
+      margin-bottom: 0;
+    }
+    .footer-wrapper {
+      flex-direction: column;
+      .footer-inner-wrapper {
+        width: 100%;
+        padding: 30px;
+        &:first-child {
+          border-right: 0;
+          border-bottom: 1px solid #fff;
+        }
+      }
+    }
+    #copyright .container {
+      flex-direction: column;
+      text-align: center;
+      justify-content: center;
+      gap: 15px
+    }
   }
   .food-section .splide__pagination {
     bottom: -30px;
