@@ -10,10 +10,10 @@
           </div>
         </div>
         <div class="footer-social-media">
-          <a class="social-media-link" href="#" target="_blank">
+          <a class="social-media-link" href="https://www.instagram.com/yoyogi.sushi/" target="_blank">
             <img src="<?= get_template_directory_uri() . '/images/instagram.svg'?>" alt="Yoyogi Sushi"> 
           </a>
-          <a class="social-media-link" href="#" target="_blank">
+          <a class="social-media-link" href="https://www.instagram.com/yoyogi.sushi/" target="_blank">
             <img src="<?= get_template_directory_uri() . '/images/facebook.svg'?>" alt="Yoyogi Sushi"> 
           </a>
         </div>
@@ -22,17 +22,17 @@
         </div>
         <div class="contact">
           <span>TEL: 03 9650 0828</span>
-          <span>hello@yoyogi.com.au</span>
+          <span>hello@yoyogisushi.au</span>
         </div>
       </div>
       <div class="footer-inner-wrapper">
         <div class="footer-logo">
           <div class="image-wrapper">
-            <img src="<?= get_template_directory_uri() . '/images/footer-logo.svg'?>" alt="Yoyogi Sushi">
+            <img src="<?= get_template_directory_uri() . '/images/superhiro-logo.svg'?>" alt="Yoyogi Sushi">
           </div>
         </div>
         <div class="footer-social-media">
-          <a class="social-media-link" href="#" target="_blank">
+          <a class="social-media-link" href="https://www.instagram.com/superhiromelbourne/" target="_blank">
             <img src="<?= get_template_directory_uri() . '/images/instagram.svg'?>" alt="Yoyogi Sushi"> 
           </a>
           <a class="social-media-link" href="#" target="_blank">

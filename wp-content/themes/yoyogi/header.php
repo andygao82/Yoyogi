@@ -24,13 +24,14 @@
           <span>MON - SUN<br> 9:00AM - 10:00PM</span>
         </div>
         <div class="links">
-          <a class="social-media-link" href="#" target="_blank">
+          <a class="social-media-link" href="https://www.instagram.com/yoyogi.sushi/" target="_blank">
             <img src="<?= get_template_directory_uri() . '/images/instagram.svg'?>" alt="Yoyogi Sushi"> 
           </a>
-          <a class="social-media-link" href="#" target="_blank">
+          <a class="social-media-link" href="https://www.facebook.com/profile.php?id=61552672014895
+" target="_blank">
             <img src="<?= get_template_directory_uri() . '/images/facebook.svg'?>" alt="Yoyogi Sushi"> 
           </a>
-          <a href="#" class="link">Online Order</a>
+          <a href="https://w.abacus.co/Store/5324528" class="link">Online Order</a>
         </div>
       </div>
       <div class="side menu-icon" id="menu-icon">
