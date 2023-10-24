@@ -88,7 +88,7 @@
             <div class="food-content-details fadeUp">
               <?= get_field('joy_section_content')?>
             </div>
-            <a href="<?= get_field('conveyoy_belt_menu')?>" target="_blank" class="link arrow-link fadeUp-10">
+            <a href="https://w.abacus.co/Store/5324528" target="_blank" class="link arrow-link fadeUp-10">
               <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
               <span>View Menu</span>
             </a>
@@ -120,7 +120,7 @@
             <div class="food-content-details fadeUp">
               <?= get_field('handroll_bar_content')?>
             </div>
-            <a href="<?= get_field('handroll_bar_menu')?>" target="_blank" class="link arrow-link fadeUp-10">
+            <a href="https://w.abacus.co/Store/5324528" target="_blank" class="link arrow-link fadeUp-10">
               <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
               <span>View Menu</span>
             </a>

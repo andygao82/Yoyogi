@@ -31,7 +31,7 @@
 " target="_blank">
             <img src="<?= get_template_directory_uri() . '/images/facebook.svg'?>" alt="Yoyogi Sushi"> 
           </a>
-          <a href="https://w.abacus.co/Store/5324528" class="link">Online Order</a>
+          <a href="https://w.abacus.co/Store/5324528" class="link" target="_blank">Online Order</a>
         </div>
       </div>
       <div class="side menu-icon" id="menu-icon">
