@@ -21,7 +21,7 @@
           <span>269 Swanston St, Melbourne VIC 3000</span>
         </div>
         <div class="contact">
-          <span>TEL: 03 9650 0828</span>
+          <span>TEL: 03 9654 0818</span>
           <span>hello@yoyogisushi.au</span>
         </div>
       </div>
@@ -44,7 +44,7 @@
         </div>
         <div class="contact">
           <span>TEL: 03 9663 7266</span>
-          <span>hello@superhiro.com.au</span>
+          <span>info.superhiro@gmail.com</span>
         </div>
         <a href="https://www.superhiro.com.au/" class="link arrow-link" target="_blank">
           <img src="<?= get_template_directory_uri() . '/images/arrow.svg'?>" alt="arrow">
