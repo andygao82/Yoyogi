@@ -500,6 +500,7 @@ nav {
     padding: 30px 20px 20px;
     .social-media-link {
       display: block;
+      height: 24px;
       & img {
         max-height: 24px;
       }
