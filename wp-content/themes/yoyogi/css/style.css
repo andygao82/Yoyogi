@@ -169,6 +169,7 @@ nav {
 .info {
   display: flex;
   gap: 16px;
+  align-items: center;
   & span {
     font-weight: 800;
     font-size: 2rem;
@@ -178,6 +179,9 @@ nav {
   }
   .divider {
     font-weight: normal;
+  }
+  .opening-hours span {
+    font-size: 1.5rem;
   }
 }
 .link {
@@ -963,6 +967,9 @@ nav {
     gap: 30px;
     & span {
       font-size: 1.3rem;
+    }
+    .header-address {
+      display: none;
     }
   }
   nav {

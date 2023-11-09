@@ -22,7 +22,7 @@
         </div>
         <div class="contact">
           <span>TEL: 03 9654 0818</span>
-          <span>hello@yoyogisushi.au</span>
+          <span>info.yoyogisushi@gmail.com</span>
         </div>
       </div>
       <div class="footer-inner-wrapper">

@@ -19,9 +19,12 @@
     <div class="wrapper">
       <div class="main inner-wrapper">
         <div class="info">
-          <span>269 Swanston St,<br> Melbourne VIC 3000</span> 
+          <span class="header-address">269 Swanston St,<br> Melbourne VIC 3000</span> 
           <span class="divider">|</span>
-          <span>MON - SUN<br> 9:00AM - 10:00PM</span>
+          <div class="opening-hours">
+            <span>SUN - THUR 11:00AM - 21:30PM</span> <br>
+            <span>FRI - SAT 11:00AM - 22:30PM</span>
+          </div>
         </div>
         <div class="links">
           <a class="social-media-link" href="https://www.instagram.com/yoyogi.sushi/" target="_blank">
