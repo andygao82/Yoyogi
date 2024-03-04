@@ -137,7 +137,7 @@ nav {
   .menu {
     height: 100%;
     .menu-item {
-      height: calc(100% / 7);
+      height: calc(100% / 8);
       display: flex;
       align-items: center;
       justify-content: flex-end;
