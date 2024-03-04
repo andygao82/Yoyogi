@@ -69,7 +69,7 @@ document.addEventListener( 'DOMContentLoaded', function () {
   scrollToElement(aboutUsLink1, 'about-us');
   scrollToElement(sushiTrainLink, 'sushi-train');
   scrollToElement(handrollBarLink, 'hand-roll');
-  scrollToElement(beverageLink, 'beverage');
+  //scrollToElement(beverageLink, 'beverage');
   scrollToElement(contactLink, 'footer');
 
   inView('.fadeUp').on('enter', function (element) {
